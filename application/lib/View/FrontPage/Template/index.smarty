@@ -1,0 +1,20 @@
+<<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>{$tool_fullname} (DEVELOPMENT)</title>
+		{foreach $stylesheets as $stylesheet}
+		<link rel="stylesheet" type="text/css" href="{$stylesheet}" />
+		{foreachelse}
+		{/foreach}
+		{foreach $javascript as $jsfile}
+		<script language="javascript" type="text/javascript" src="{$jsfile}"></script>
+		{foreachelse}
+		{/foreach}
+	</head>
+	<body>
+		<div id="home_bottom">
+			<div id="button_test_jquery">Test JQuery</div>
+		</div>
+	</body>
+</html>
