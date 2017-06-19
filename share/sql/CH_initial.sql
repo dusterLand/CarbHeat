@@ -12,3 +12,7 @@ begin
 	return new;
 end;
 $$ language 'plpgsql';
+
+grant usage on schema carbheat to carbheat;
+grant insert, update, delete, select on all tables in schema carbheat to carbheat;
+grant update, select, usage on all sequences in schema carbheat to carbheat;
