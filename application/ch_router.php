@@ -29,7 +29,7 @@ if( in_array( $request_uri, array_keys( $routes ))) {
 		$targetController = new $routes[ $request_uri ]();
 		ch_bs_log( $targetController, 'Controller object' );
 //		$targetController->displayPage();
-		$targetFunction = 'displayPage';
+		$targetFunction = 'Index';
 	} else if( preg_match( '/Controller/', $destination_segments[ count( $destination_segments ) - 2 ])) {
 		ch_bs_log( 'Controller function called' );
 		$targetFunction = array_pop( $destination_segments );
@@ -42,6 +42,6 @@ if( in_array( $request_uri, array_keys( $routes ))) {
 	$controllerObj->$targetFunction();
 } else {
 	ch_bs_log( 'URI is NOT in routes, display front page' );
-	$targetController = new CarbHeat\Controller\FrontPage\FrontPageController( $smarty );
-	$targetController->DisplayPage( $smarty );
+	$targetController = new CarbHeat\Controller\CarbHeatMain\CarbHeatController( $smarty );
+	$targetController->Index( $smarty );
 }
