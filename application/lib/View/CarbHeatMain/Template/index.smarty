@@ -13,6 +13,11 @@
 		{/foreach}
 	</head>
 	<body>
-		Howdy.
+		<div id="ch_title">
+			Flight Sim Assistant
+		</div>
+		<div id="ch_main_menu">
+		</div>
+		<p>Howdy.</p>
 	</body>
 </html>

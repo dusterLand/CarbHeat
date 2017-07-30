@@ -23,10 +23,13 @@ class CarbHeatController {
 	public function Index() {
 		$this->log_carbheat->trace( __FUNCTION__ . ' called' );
 		global $smarty;
-		$stylesheets = array();
+		$stylesheets = array(
+			'/CSS/index.css',
+		);
 		$javascript = array();
 		$smarty->assign( 'stylesheets', $stylesheets );
 		$smarty->assign( 'javascript', $javascript );
+		$smarty->assign( 'tool_fullname', CH_Utility::TOOL_FULLNAME );
 		$smarty->display( $smarty->template_dir[0] . 'index.smarty' );
 	}
 }

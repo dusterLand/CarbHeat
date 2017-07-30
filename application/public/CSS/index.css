@@ -1,0 +1,12 @@
+body {
+	background: #306090;
+	color: #ccccff;
+	font-family: "Calibri", sans-serif;
+}
+
+#ch_main_menu {}
+
+#ch_title {
+	font-size: 300%;
+	font-weight: bold;
+}
